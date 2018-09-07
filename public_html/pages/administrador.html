@@ -1,0 +1,89 @@
+
+<div id="admin">
+    <h2>Administrador !</h2>
+    <hr>
+    <br/>
+    <br/>
+    <div>
+        <!-- PESSOA -->
+        <form> 
+            <h2>Pessoa</h2>
+            <div class="jumbotron"> 
+                <li style="color: royalblue">@GET - Listar Url[ site/rest/pessoa/ ]</li> 
+                <li style="color: royalblue">@GET - ID Url[ site/rest/pessoa/{id} ]</li> 
+                <li style="color: teal">@POST - Url[ site/rest/pessoa/ ]</li> 
+                <li style="color: yellowgreen">@PUT - Url[ site/rest/pessoa/ ]</li> 
+                <li style="color: tomato">@DELETE - Url[ site/rest/pessoa/{id} ]</li> 
+                <br/>
+                <button class="btn btn-success" ng-click="carregarPessoa()">Carregar Json</button>
+                <br/>                      
+                <br/>                      
+                <textarea style="width: 100%;height: 250px;color: royalblue;font-family: sans-serif">
+                        {{pessoaPagina}}
+                </textarea> 
+                <br/>                      
+                <br/>
+                <div ng-show="pessoaPagina.length > 0"> 
+                    <div ng-include="'pages/pessoas.html'"></div>
+                </div>
+            </div>                
+        </form>
+    </div> 
+    <!-- USUARIO -->
+    <div>
+        <form> 
+            <h2>Usuario</h2>
+            <div class="jumbotron"> 
+                <li style="color: royalblue">@GET - Listar Url[ site/rest/usuario/ ]</li> 
+                <li style="color: royalblue">@GET - ID Url[ site/rest/usuario/{id} ]</li> 
+                <li style="color: teal">@POST - Url[ site/rest/usuario/ ]</li> 
+                <li style="color: yellowgreen">@PUT - Url[ site/rest/usuario/ ]</li> 
+                <li style="color: tomato">@DELETE - Url[ site/rest/usuario/{id} ]</li> 
+                <br/>
+                <button class="btn btn-success" ng-click="carregarUsuario()">Carregar Json</button>
+                <br/>                      
+                <br/>                      
+                <textarea style="width: 100%;height: 250px;color: royalblue;font-family: sans-serif">
+                        {{usuarioPagina}}
+                </textarea> 
+                <br/>                      
+                <br/>
+                <div ng-show="usuarioPagina.length > 0"> 
+                    <div ng-include="'pages/usuarios.html'"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- CONTEUDO -->
+    <div>
+        <form> 
+            <h2>Conteudo</h2>
+            <div class="jumbotron"> 
+                <li style="color: royalblue">@GET - Listar Url[ site/rest/conteudo/ ]</li> 
+                <li style="color: royalblue">@GET - ID Url[ site/rest/conteudo/{id} ]</li> 
+                <li style="color: teal">@POST - Url[ site/rest/conteudo/ ]</li> 
+                <li style="color: yellowgreen">@PUT - Url[ site/rest/conteudo/ ]</li> 
+                <li style="color: tomato">@DELETE - Url[ site/rest/conteudo/{id} ]</li> 
+                <br/>
+                <button class="btn btn-success" ng-click="carregarConteudo()">Carregar Json</button>
+                <br/>                      
+                <br/>                      
+                <textarea style="width: 100%;height: 250px;color: royalblue;font-family: sans-serif">
+                        {{conteudoPagina}}
+                </textarea> 
+                <br/>                      
+                <br/>
+                <div ng-show="conteudoPagina.length > 0"> 
+                    <div ng-include="'pages/conteudo.html'"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+</div>               
+

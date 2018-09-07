@@ -1,0 +1,23 @@
+<div class="container" style="padding-top:10px;">   
+        <h2>Usuario Cadastrado </h2> <br/>
+
+        <table style="width:100%"  class="table table-hover">
+            <thead>
+                <tr>
+                    <th><h3>Nome</h3></th>
+                    <th><h3>Tipo</h3></th>
+                    <th><h3>Senha</h3></th>                   
+                    <th><h3>CPF</h3></th>                
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="usuario in usuarioPagina">
+                    <td>{{usuario.pessoa.nome}}</td>
+                    <td>{{usuario.tipo}}</td>
+                    <td>{{usuario.senha}}</td>                 
+                    <td>{{usuario.pessoa.cpf}}</td>  
+                </tr>
+            </tbody>
+
+        </table>
+</div>

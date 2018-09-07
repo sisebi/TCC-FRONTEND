@@ -1,0 +1,20 @@
+<div class="container" style="padding-top:10px;">
+        <h2> Conteudo Cadastrado </h2> <br/>
+
+        <table style="width:100%"  class="table table-hover">
+            <thead>
+                <tr>                    
+                    <th><h3>Titulo</h3></th>
+                    <th><h3>Categoria</h3></th>                     
+                    <th><h3>Link</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="conteudo in conteudoPagina">                   
+                    <td>{{conteudo.titulo}}</td>
+                    <td>{{conteudo.categoria}}</td>  
+                    <td>{{conteudo.link}}</td>
+                </tr>
+            </tbody>
+        </table>
+</div>

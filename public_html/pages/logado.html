@@ -1,0 +1,19 @@
+<div>
+    <div ng-show="$root.usuarioLogado == null"><h1>Não Autorizado !</h1></div>
+
+    <div ng-show="$root.usuarioLogado != null">
+        <div ng-show="$root.usuarioLogado.tipo == 'ADM'" class="form-signin">
+            <div> 
+                <div ng-include="'pages/administrador.html'"></div>
+            </div>
+        </div> 
+
+        <div ng-show="$root.usuarioLogado.tipo == 'SEC'"><h1>Secretaria !</h1></div>
+        <div ng-show="$root.usuarioLogado.tipo == 'PFR'"><h1>Professor !</h1></div>
+        <div ng-show="$root.usuarioLogado.tipo == 'ALN'"><h1>Aluno !</h1></div>
+    </div>
+</div>
+
+</div>
+
+
