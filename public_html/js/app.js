@@ -21,16 +21,21 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
                 method:'GET',
                 url:'http.site.com/rest/pessoa/pessoa.json'}).then(function successCallback(responses) {
             $scope.pessoaPagina = responses.data;
-        });
+            $rootScope.msgPessoa = "Carregado com sucesso !";
+        }, function errorCallback(response) {
+                    $rootScope.msgPessoa = "erro ao processar !";
+                });
         };
-       
         //Usuarios para Pagina
         $scope.carregarUsuario = function () {
             $http({
                 method:'GET',
                 url:'http.site.com/rest/usuario/usuario.json'}).then(function successCallback(responses) {
             $scope.usuarioPagina = responses.data;
-        });
+            $rootScope.msgUsuario = "Carregado com sucesso !";
+        }, function errorCallback(response) {
+                    $rootScope.msgUsuario = "erro ao processar !";
+                });
         };
         //Conteudo para Pagina
         $scope.carregarConteudo = function () {
@@ -38,6 +43,20 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
                 method:'GET',
                 url:'http.site.com/rest/conteudo/conteudo.json'}).then(function successCallback(response) {
                     $scope.conteudoPagina = response.data;
+                    $rootScope.msgConteudo = "Carregado com sucesso !";
+            }, function errorCallback(response) {
+                    $rootScope.msgConteudo = "erro ao processar !";
+                });            
+        };
+        //Curso para Pagina
+        $scope.carregarCurso = function () {
+            $http({
+                method:'GET',
+                url:'http.site.com/rest/curso/curso.json'}).then(function successCallback(response) {
+                $scope.cursoPagina = response.data;
+                $rootScope.msgCurso = "Carregado com sucesso !";
+            }, function errorCallback(response) {
+                $rootScope.msgCurso = "erro ao processar !";                
             });            
         };
 
