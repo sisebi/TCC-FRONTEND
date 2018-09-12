@@ -14,29 +14,29 @@ app.config(function ($routeProvider, $locationProvider) {
 
 app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', function ($scope, $http, $location, $rootScope) {
         
-//        //Pessoas
-//        $http.get('http.site.com/rest/pessoa/pessoa.json').then(function (responses) {
-//            $scope.pessoas = responses.data;
-//        });
+
         //Pessoas para Pagina
         $scope.carregarPessoa = function () {
-            $http.get('http.site.com/rest/pessoa/pessoa.json').then(function (responses) {
+            $http.get({
+                method:'GET',
+                url:'http.site.com/rest/pessoa/pessoa.json'}).then(function successCallback(responses) {
             $scope.pessoaPagina = responses.data;
         });
         };
-        //Usuarios
-//        $http.get('http.site.com/rest/usuario/usuario.json').then(function (response) {
-//            $scope.usuarios = response.data;
-//        });
+       
         //Usuarios para Pagina
         $scope.carregarUsuario = function () {
-            $http.get('http.site.com/rest/usuario/usuario.json').then(function (responses) {
+            $http.get({
+                method:'GET',
+                url:'http.site.com/rest/usuario/usuario.json'}).then(function successCallback(responses) {
             $scope.usuarioPagina = responses.data;
         });
         };
         //Conteudo para Pagina
         $scope.carregarConteudo = function () {
-            $http.get('http.site.com/rest/conteudo/conteudo.json').then(function(response) {
+            $http.get({
+                method:'GET',
+                url:'http.site.com/rest/conteudo/conteudo.json'}).then(function successCallback(response) {
                     $scope.conteudoPagina = response.data;
             });            
         };
@@ -45,7 +45,7 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
 
             $http({
                     method:'GET',
-                    url:'http.site.com/rest/usuario/usuario.json'}).then(function (responses) {
+                    url:'http.site.com/rest/usuario/usuario.json'}).then(function successCallback(responses) {
                 angular.forEach(responses.data, function (value, key) {
                     if (value.userName == $scope.edtnome &&
                             value.senha == $scope.edtsenha) {
