@@ -45,7 +45,7 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
 
             $http.get('http.site.com/rest/usuario/usuario.json').then(function (responses) {
                 angular.forEach(responses.data, function (value, key) {
-                    if (value.pessoa.nome == $scope.edtnome &&
+                    if (value.userName == $scope.edtnome &&
                             value.senha == $scope.edtsenha) {
                         delete value.senha;
                         $scope.edtnome = '';
