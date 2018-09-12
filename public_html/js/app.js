@@ -59,6 +59,17 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
                 $rootScope.msgCurso = "erro ao processar !";                
             });            
         };
+        //Matricula para Pagina
+        $scope.carregarMatricula = function () {
+            $http({
+                method:'GET',
+                url:'http.site.com/rest/matricula/matricula.json'}).then(function sucessCallback(response) {
+                $scope.matriculaPagina = response.data;
+                $rootScope.msgMatricula = "Carregado com sucesso !";
+            }, function errorCallback(response) {
+                $rootScope.msgMatricula = "erro ao processar !";
+            });
+        };
 
         $scope.logar = function () {
 
