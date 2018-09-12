@@ -43,7 +43,9 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
 
         $scope.logar = function () {
 
-            $http.get('http.site.com/rest/usuario/usuario.json').then(function (responses) {
+            $http({
+                    method:'GET',
+                    url:'http.site.com/rest/usuario/usuario.json'}).then(function (responses) {
                 angular.forEach(responses.data, function (value, key) {
                     if (value.userName == $scope.edtnome &&
                             value.senha == $scope.edtsenha) {
