@@ -14,10 +14,10 @@ app.config(function ($routeProvider, $locationProvider) {
 
 app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', function ($scope, $http, $location, $rootScope) {
         
-        //Pessoas
-        $http.get('http.site.com/rest/pessoa/pessoa.json').then(function (responses) {
-            $scope.pessoas = responses.data;
-        });
+//        //Pessoas
+//        $http.get('http.site.com/rest/pessoa/pessoa.json').then(function (responses) {
+//            $scope.pessoas = responses.data;
+//        });
         //Pessoas para Pagina
         $scope.carregarPessoa = function () {
             $http.get('http.site.com/rest/pessoa/pessoa.json').then(function (responses) {
@@ -25,9 +25,9 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
         });
         };
         //Usuarios
-        $http.get('http.site.com/rest/usuario/usuario.json').then(function (response) {
-            $scope.usuarios = response.data;
-        });
+//        $http.get('http.site.com/rest/usuario/usuario.json').then(function (response) {
+//            $scope.usuarios = response.data;
+//        });
         //Usuarios para Pagina
         $scope.carregarUsuario = function () {
             $http.get('http.site.com/rest/usuario/usuario.json').then(function (responses) {
