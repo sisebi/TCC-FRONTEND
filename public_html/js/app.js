@@ -13,11 +13,11 @@ app.config(function ($routeProvider, $locationProvider) {
 });
 
 app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', function ($scope, $http, $location, $rootScope) {
+        $rootScope.msg = "Seja bem vindo. Logue para ter acesso a todo conteúdo.";
         
-
         //Pessoas para Pagina
         $scope.carregarPessoa = function () {
-            $http.get({
+            $http({
                 method:'GET',
                 url:'http.site.com/rest/pessoa/pessoa.json'}).then(function successCallback(responses) {
             $scope.pessoaPagina = responses.data;
@@ -26,7 +26,7 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
        
         //Usuarios para Pagina
         $scope.carregarUsuario = function () {
-            $http.get({
+            $http({
                 method:'GET',
                 url:'http.site.com/rest/usuario/usuario.json'}).then(function successCallback(responses) {
             $scope.usuarioPagina = responses.data;
@@ -34,7 +34,7 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
         };
         //Conteudo para Pagina
         $scope.carregarConteudo = function () {
-            $http.get({
+            $http({
                 method:'GET',
                 url:'http.site.com/rest/conteudo/conteudo.json'}).then(function successCallback(response) {
                     $scope.conteudoPagina = response.data;
@@ -53,6 +53,9 @@ app.controller('formControle', ['$scope', '$http', '$location', '$rootScope', fu
                         $scope.edtnome = '';
                         $scope.edtsenha = '';
                         $rootScope.usuarioLogado = value;
+                        $location.path('/home');
+                    }else{
+                        $rootScope.msg = "Usuario não validado !";
                         $location.path('/home');
                     }
                 })
