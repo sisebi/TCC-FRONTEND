@@ -1,0 +1,22 @@
+<div class="container" style="padding-top:10px;">   
+    <h2>Matricula Cadastrado </h2> <br/>
+
+    <table style="width:100%"  class="table table-hover">
+        <thead>
+            <tr>
+                <th><h3>Id</h3></th>
+                <th><h3>Aluno</h3></th>
+                <th><h3>Curso</h3></th>           
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="matricula in matriculaPagina">
+                <td>{{matricula.id}}</td>
+                <td>{{matricula.aluno.pessoa.nome}}</td>
+                <td>{{matricula.curso.nome}}</td>                 
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+

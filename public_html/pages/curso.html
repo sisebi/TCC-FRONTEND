@@ -1,0 +1,21 @@
+<div class="container" style="padding-top:10px;">   
+    <h2>Curso Cadastrado </h2> <br/>
+
+    <table style="width:100%"  class="table table-hover">
+        <thead>
+            <tr>
+                <th><h3>Id</h3></th>
+                <th><h3>Nome</h3></th>
+                <th><h3>Descrição</h3></th>           
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="curso in cursoPagina">
+                <td>{{curso.id}}</td>
+                <td>{{curso.nome}}</td>
+                <td>{{curso.descricao}}</td>                 
+            </tr>
+        </tbody>
+
+    </table>
+</div>
