@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html ng-app="MyApp">
+    <head>
+        <title>TCC-Etec Bento Quirino</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="tree/master/public_html/css/bootstrap.min.css">
+        <link rel="stylesheet" href="tree/master/public_html/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="tree/master/public_html/css/main.css">
+        <link href="navbar-top.css" rel="stylesheet">
+        <link rel="stylesheet" href="tree/master/public_html/css/normalize.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div> 
+            <div ng-include="'tree/master/public_html/pages/menu.html'"></div>
+            <h1>Teste</h1>
+        </div>
+     
+        <div class="container" ng-view></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
+        <script src="http://code.angularjs.org/1.3.0/angular-route.js"></script>
+        <script src="tree/master/public_html/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="tree/master/public_html/js/instascan.min.js"></script>
+        <script src="tree/master/public_html/js/vendor/popper.min.js"></script>
+        <script>window.jQuery || document.write('<script src="tree/master/public_html/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="tree/master/public_html/js/vendor/bootstrap.min.js"></script>
+        <script src="tree/master/public_html/js/main.js"></script>
+        <script src="tree/master/public_html/js/app.js"></script>
+
+    </body>
+</html>
